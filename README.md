@@ -26,7 +26,7 @@ To run this project locally:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/my-website.git
+   git clone https://github.com/aniketme/brt-website.git
    cd my-website
    npm install
    npm start
