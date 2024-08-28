@@ -1,0 +1,23 @@
+/* src/components/AboutUs.css */
+.about-us {
+    background-color: #f4f4f4;
+    padding: 60px 20px;
+  }
+  
+  .about-us .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .about-us h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .about-us p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+  }
+  

@@ -1,0 +1,115 @@
+/* Navbar.css */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+  backdrop-filter: blur(1px); /* Adds a blur effect to the background */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  z-index: 1000; /* Ensures the navbar stays on top */
+  transition: background 0.3s ease; /* Smooth transition for background change */
+  padding: 1rem 2rem; /* Increased padding to double the height */
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px; /* Centers the content within a max width */
+  margin: 0 auto; /* Centers the navbar container */
+  width: 100%;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.navbar-toggle {
+  display: block; /* Ensure it's visible on smaller screens */
+  color: #fff; /* Change to white if it's on a dark background */
+  font-size: 1.5rem; /* Make sure the size is appropriate */
+  background: none; /* No background color to keep it simple */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor to indicate it's clickable */
+  position: relative; /* Add positioning for potential absolute elements */
+  z-index: 1001; /* Ensure it appears above the navbar */
+}
+
+.navbar-toggle-icon {
+  font-size: 2.0rem; /* Adjust size as needed */
+  color: #fff; /* Ensure this color is visible against the navbar background */
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li {
+  margin-left: 2rem; /* Increased margin for spacing between items */
+}
+
+.navbar-menu a {
+  color: #fff; /* White text color */
+  text-decoration: none;
+  font-size: 1.25rem; /* Increased font size */
+  line-height: 1.5;
+  font-weight: bold; /* Bold text */
+  transition: color 0.3s ease;
+}
+
+.navbar-menu a:hover {
+  text-decoration: underline;
+}
+
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  backdrop-filter: none; /* Remove blur effect */
+}
+
+.navbar.scrolled .navbar-menu a {
+  color: #000; /* Dark text color when scrolled */
+}
+
+.logo-image {
+  height: 75px; /* Adjust the height as needed */
+  width: auto; /* Keep the aspect ratio */
+  margin-right: 1rem; /* Space between the logo and the menu */
+}
+
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    transition: all 0.3s ease;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  .navbar-menu li {
+    margin: 0.5rem 0; /* Adjust margin for vertical stacking */
+  }
+
+   .navbar-menu a {
+    color: #fff; /* Make sure text color is visible */
+    font-size: 1.2rem; /* Increase font size for better readability */
+    font-weight: bold; /* Make text bold */
+  }
+}
